@@ -37,5 +37,20 @@ namespace WeddingsAutomation.Utilities
             IWebElement element = _driver.FindElement(elementLocator);
             return element.GetAttribute(attribute).Contains(expectedCondition);
         }
+
+        public void SwitchToAlert()
+        {
+            _driver.SwitchTo().Alert();
+        }
+
+        public bool IsElementDisplayed(By elementLocator)
+        {
+            return _driver.FindElement(elementLocator).Displayed;
+        }
+
+        public bool IsElementEnaled(By elementLocator)
+        {
+            return _driver.FindElement(elementLocator).Enabled;
+        }
     }
 }
