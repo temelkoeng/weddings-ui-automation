@@ -18,7 +18,7 @@ namespace WeddingsAutomation.Tests
             driver = new WebDriverController(WebDriverManager.Driver);
         }
 
-        [TearDown]
+        [OneTimeTearDown]
         public void Teardown()
         {
             driver.QuitWebDriver();

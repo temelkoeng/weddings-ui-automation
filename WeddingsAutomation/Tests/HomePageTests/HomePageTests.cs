@@ -23,9 +23,15 @@ namespace WeddingsAutomation.Tests.HomePageTests
         [Test]
         public void VerifyTheReservationButtonIsDisplayedProperlyOnTheHomePage()
         {
-            Console.WriteLine(_homePage.pageUrl);
-            Assert.True(_homePage.IsReservationButtonDisplayed());
-            Assert.True(_homePage.IsReservationButtonEnabled());
+            Assert.True(_homePage.IsReservationButtonDisplayed(), "Reservation button is not displayed on the Home page!");
+            Assert.True(_homePage.IsReservationButtonEnabled(), "Reservation button is not enabled on the Home page!");
+        }
+
+        [Test]
+        public void VerifyTheAboutUsButtonIsDisplayedProperlyOnTheHomePage()
+        {
+            Assert.True(_homePage.IsForUsButtonDisplayed(), "About us button is not displayed on the Home page!");
+            Assert.True(_homePage.IsForUsButtonEnabled(), "About us button is not enabled on the Home page!");
         }
     }
 }

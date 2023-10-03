@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace WeddingsAutomation.Utilities
     public class WebDriverController
     {
         private readonly IWebDriver _driver;
-        
+
         public WebDriverController(IWebDriver driver)
         {
             this._driver = driver;
@@ -51,6 +52,16 @@ namespace WeddingsAutomation.Utilities
         public bool IsElementEnaled(By elementLocator)
         {
             return _driver.FindElement(elementLocator).Enabled;
+        }
+
+        public string GetUsername()
+        {
+            return TestContext.Parameters.Get("username");
+        }
+
+        public string GetPassword()
+        {
+            return TestContext.Parameters.Get("password");
         }
     }
 }
