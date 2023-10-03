@@ -26,9 +26,16 @@ namespace WeddingsAutomation.Utilities
             _driver.Navigate().GoToUrl(url);
         }
 
-        public void ClickElement(IWebElement element)
+        public void ClickElement(By elementLocator)
         {
+            IWebElement element =  _driver.FindElement(elementLocator);
             element.Click();
+        }
+
+        public bool IsAttributePresented(By elementLocator, string expectedCondition, string attribute)
+        {
+            IWebElement element = _driver.FindElement(elementLocator);
+            return element.GetAttribute(attribute).Contains(expectedCondition);
         }
     }
 }
