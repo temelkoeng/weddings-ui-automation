@@ -49,7 +49,7 @@ namespace WeddingsAutomation.Utilities
             return _driver.FindElement(elementLocator).Displayed;
         }
 
-        public bool IsElementEnaled(By elementLocator)
+        public bool IsElementEnabled(By elementLocator)
         {
             return _driver.FindElement(elementLocator).Enabled;
         }
