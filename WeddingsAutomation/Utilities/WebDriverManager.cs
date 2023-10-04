@@ -17,8 +17,15 @@ namespace WeddingsAutomation.Utilities
             get
             {
                 if (_driver == null)
+                {
+                    var options = new ChromeOptions();
+                    options.AddArgument("--headless=new");
                     _driver = new ChromeDriver();
-                
+
+                    _driver.Manage().Window.Maximize();
+
+                }
+
                 return _driver;
             }
         }

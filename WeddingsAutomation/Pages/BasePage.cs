@@ -8,20 +8,19 @@ using WeddingsAutomation.Utilities;
 
 namespace WeddingsAutomation.Pages
 {
-    public class GoogleHomePage
+    public class BasePage
     {
-        private WebDriverController _driver;
-        private const string URL = "https://www.google.com";
+        protected WebDriverController _driver;
+        protected string PageUrl { get; set; }
 
-
-        public GoogleHomePage(WebDriverController driver)
+        public BasePage(WebDriverController driver)
         {
             this._driver = driver;
         }
 
-        public void GoToHomePage()
+        public void NavigateToPage()
         {
-            _driver.NavigateToUrl(URL);
+            _driver.NavigateToUrl(PageUrl);
         }
     }
 }
