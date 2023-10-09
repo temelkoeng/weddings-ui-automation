@@ -29,10 +29,5 @@ namespace WeddingsAutomation.Utilities
                 return _driver;
             }
         }
-
-        public static void QuitDriver()
-        {
-            _driver.Quit();
-        }
     }
 }

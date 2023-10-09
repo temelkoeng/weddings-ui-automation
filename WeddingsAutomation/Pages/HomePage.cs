@@ -35,7 +35,8 @@ namespace WeddingsAutomation.Pages
         private By PrivacyPolicyLocator = By.XPath("//span[contains(text(), 'Политика за поверителност')]/..");
         private By TermsOfUseLocator = By.XPath("//span[contains(text(), 'Условия за ползване')]/..");
         private By CookiesPolicyLocator = By.XPath("//span[contains(text(), 'Политика за използване на \"бисквитки\"')]/..");
-        private By LogoButtonSelector = By.CssSelector("[src='/build/front/images/logo12fe487b.png']");
+        private By LogoButtonSelector = By.CssSelector(".logo img");
+       
         public HomePage(WebDriverController driver) : base(driver)
         {
             base.PageUrl = this.PageUrl;
@@ -139,6 +140,7 @@ namespace WeddingsAutomation.Pages
         {
             return _driver.IsElementEnabled(PrivacyPolicyLocator);
         }
+
         public bool IsTermsOfUseButtonDisplayed()
         {
             return _driver.IsElementDisplayed(TermsOfUseLocator);
