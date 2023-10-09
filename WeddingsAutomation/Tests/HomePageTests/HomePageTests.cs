@@ -23,6 +23,7 @@ namespace WeddingsAutomation.Tests.HomePageTests
         [Test]
         public void VerifyTheReservationButtonIsDisplayedProperlyOnTheHomePage()
         {
+           
             Assert.True(_homePage.IsReservationButtonDisplayed(), "Reservation button is not displayed on the Home page!");
             Assert.True(_homePage.IsReservationButtonEnabled(), "Reservation button is not enabled on the Home page!");
         }

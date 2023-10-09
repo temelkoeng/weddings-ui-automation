@@ -1,10 +1,12 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace WeddingsAutomation.Utilities
 {
@@ -62,6 +64,12 @@ namespace WeddingsAutomation.Utilities
         public string GetPassword()
         {
             return TestContext.Parameters.Get("password");
+        }
+
+        public void WaitForElementToBeDisplayed(By locator)
+        {
+            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
+            wait.Until(x => x.FindElement(locator));
         }
     }
 }

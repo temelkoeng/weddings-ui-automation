@@ -17,7 +17,9 @@ namespace WeddingsAutomation.Tests
         [OneTimeSetUp]
         public void Setup()
         {
-            driver = new WebDriverController(new ChromeDriver());
+            IWebDriver chromeDriver = new ChromeDriver();
+            chromeDriver.Manage().Window.Maximize();
+            driver = new WebDriverController(chromeDriver);
         }
 
         [OneTimeTearDown]
