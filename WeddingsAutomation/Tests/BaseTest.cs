@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace WeddingsAutomation.Tests
         [OneTimeSetUp]
         public void Setup()
         {
-            driver = new WebDriverController(WebDriverManager.Driver);
+            driver = new WebDriverController();    //PLS UPDATE?!??!?!?
         }
 
         [OneTimeTearDown]
