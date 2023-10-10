@@ -20,31 +20,31 @@ namespace WeddingsAutomation.Tests.PricesPageTests
             _newsPage.NavigateToPage();
         }
         //Бъг при изпълняване на теста, аутомейшън
-/*        [Test]
+        [Test]
         public void VerifyTheYear2023AndMonthsButtonsAreDisplayedProperlyOnTheNewsPage()
         {
             Assert.True(_newsPage.IsYear2023ButtonDisplayed(), "Year 2023 button is not displayed on the News page!");
             Assert.True(_newsPage.IsYear2023ButtonEnabled(), "Year 2023 button is not enabled on the News page!");
-            *//*Assert.True(_newsPage.IsJanuaryButtonDisplayed(), "January button is not displayed on the News page!");
+            Assert.True(_newsPage.IsJanuaryButtonDisplayed(), "January button is not displayed on the News page!");
             Assert.True(_newsPage.IsJanuaryButtonEnabled(), "January button is not enabled on the News page!");
             Assert.True(_newsPage.IsFebruaryButtonDisplayed(), "February button is not displayed on the News page!");
             Assert.True(_newsPage.IsFebruaryButtonEnabled(), "February button is not enabled on the News page!");
             Assert.True(_newsPage.IsMarchButtonDisplayed(), "March button is not displayed on the News page!");
-            Assert.True(_newsPage.IsMarchButtonEnabled(), "March button is not enabled on the News page!");*//*
+            Assert.True(_newsPage.IsMarchButtonEnabled(), "March button is not enabled on the News page!");
         }
-        //Бъг при изпълняване на теста, аутомейшън*/
-/*        [Test]
+        //Бъг при изпълняване на теста, аутомейшън
+        [Test]
         public void VerifyTheYear2022AndMonthsButtonsAreDisplayedProperlyOnTheNewsPage()
         {
             Assert.True(_newsPage.IsYear2022ButtonDisplayed(), "Year 2022 button is not displayed on the News page!");
             Assert.True(_newsPage.IsYear2022ButtonEnabled(), "Year 2022 button is not enabled on the News page!");
-          *//*  Assert.True(_newsPage.IsJanuaryButtonDisplayed(), "January button is not displayed on the News page!");
+            Assert.True(_newsPage.IsJanuaryButtonDisplayed(), "January button is not displayed on the News page!");
             Assert.True(_newsPage.IsJanuaryButtonEnabled(), "January button is not enabled on the News page!");
             Assert.True(_newsPage.IsFebruaryButtonDisplayed(), "February button is not displayed on the News page!");
             Assert.True(_newsPage.IsFebruaryButtonEnabled(), "February button is not enabled on the News page!");
             Assert.True(_newsPage.IsMarchButtonDisplayed(), "March button is not displayed on the News page!");
-            Assert.True(_newsPage.IsMarchButtonEnabled(), "March button is not enabled on the News page!");*//*
-        }*/
+            Assert.True(_newsPage.IsMarchButtonEnabled(), "March button is not enabled on the News page!");
+        }
 
         [Test]
         public void VerifyTheNewsAndEventsHeaderTextIsDisplayedOnTheNewsPage()
